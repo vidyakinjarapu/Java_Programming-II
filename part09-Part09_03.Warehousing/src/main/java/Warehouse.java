@@ -1,5 +1,4 @@
 
-
 public class Warehouse {
 
     private double capacity;
@@ -11,7 +10,6 @@ public class Warehouse {
         } else {
             this.capacity = 0.0;
         }
-
         this.balance = 0.0;
     }
 
@@ -47,12 +45,11 @@ public class Warehouse {
             this.balance = 0.0;
             return allThatWeCan;
         }
-
         this.balance = this.balance - amount;
         return amount;
     }
-
+    
     public String toString() {
         return "balance = " + this.balance + ", space left " + howMuchSpaceLeft();
-    }
+    }   
 }

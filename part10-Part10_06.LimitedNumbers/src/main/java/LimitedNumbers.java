@@ -21,6 +21,5 @@ public class LimitedNumbers {
         items.stream()
                 .filter(n -> n >=1 && n <=5 )
                 .forEach(item -> System.out.println(item));
-
     }
 }

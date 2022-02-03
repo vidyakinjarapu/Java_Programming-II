@@ -1,6 +1,6 @@
+import java.util.*;
 
-
-public class Card {
+public class Card implements Comparable<Card>{
 
     private int value;
     private Suit suit;
@@ -9,12 +9,10 @@ public class Card {
         if (value < 2 || value > 14) {
             throw new IllegalArgumentException("Card value must be in range 2...14.");
         }
-
         this.value = value;
         this.suit = suit;
     }
 
-    @Override
     public String toString() {
         String cardValue = "" + value;
         if(value == 11) {
@@ -31,11 +29,26 @@ public class Card {
     }
 
     public int getValue() {
-        return value;
+        return this.value;
     }
 
     public Suit getSuit() {
         return suit;
+    }     
+    
+    public int getSuitValue(){
+        return suit.ordinal();
     }
-
+    
+    public int CardSum(){
+        return this.value + this.suit.ordinal();
+    }
+ 
+    @Override
+    public int compareTo(Card card) {
+        if(this.value - card.getValue() == 0){
+            return this.getSuit().ordinal() - card.getSuit().ordinal();             
+        }
+        return this.value - card.getValue();
+    }
 }

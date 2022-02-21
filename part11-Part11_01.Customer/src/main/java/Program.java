@@ -6,9 +6,5 @@ public class Program {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         // you can test your class here
-        System.out.println("Test again again");
-        System.out.println("new code");
-        System.out.println("Hello"
-                + " god");
     }
 }

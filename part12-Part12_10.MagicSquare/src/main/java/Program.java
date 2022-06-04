@@ -1,10 +1,13 @@
 
+import java.util.ArrayList;
+
+
 public class Program {
 
     public static void main(String[] args) {
         // Test the MagicSquare class here
-        
-        MagicSquareFactory msFactory = new MagicSquareFactory();
-        System.out.println(msFactory.createMagicSquare(5));
+        MagicSquare ms = new MagicSquare(2);
+//        MagicSquareFactory msFactory = new MagicSquareFactory();
+//        System.out.println(msFactory.createMagicSquare(3));    
     }
 }

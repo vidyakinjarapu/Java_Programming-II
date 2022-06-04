@@ -10,6 +10,5 @@ public class Program {
             System.out.println(die.throwDie());
             i++;
         }
-
     }
 }

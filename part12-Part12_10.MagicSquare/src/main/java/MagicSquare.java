@@ -6,56 +6,25 @@ public class MagicSquare {
 
     private int[][] square;
 
-    
     // ready constructor
     public MagicSquare(int size) {
         if (size < 2) {
             size = 2;
         }
+
         this.square = new int[size][size];
     }
 
     // implement these three methods
     public ArrayList<Integer> sumsOfRows() {
-        ArrayList<Integer> rowsSum = new ArrayList<>();
-        for(int row = 0; row < square.length; row++){
-            int sum = 0;
-            for(int col = 0; col < square[row].length; col++){
-                sum = sum + square[row][col];                
-            }
-            rowsSum.add(sum);
-        }
-        return rowsSum;
+        return new ArrayList<>();
     }
 
     public ArrayList<Integer> sumsOfColumns() {
-        ArrayList<Integer> colsSum = new ArrayList<>();
-        for(int col = 0; col < square[0].length; col++){
-            int sum = 0;
-            for(int row = 0; row < square.length; row++){
-                sum = sum + square[col][row];
-            }
-            colsSum.add(sum);
-        }
-        return colsSum;
+        return new ArrayList<>();
     }
 
     public ArrayList<Integer> sumsOfDiagonals() {
-        ArrayList<Integer> diagonalSum = new ArrayList<>();
-        for(int row = 0; row < square.length; row++){
-            int diaSum1 = 0;
-            int diaSum2 = 0;
-            for(int col = 0; col < square[row].length; col++){
-                if(row == col){
-                    diaSum1 += square[row][col];
-                }   
-                if(row + col == (square.length-1)){
-                    diaSum2 += square[row][col];
-                }
-                diagonalSum.add(diaSum1);
-                diagonalSum.add(diaSum2);
-            }       
-        }
         return new ArrayList<>();
     }
 
@@ -84,6 +53,7 @@ public class MagicSquare {
                 return false;
             }
         }
+
         return true;
     }
 
